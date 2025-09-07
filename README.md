@@ -30,6 +30,33 @@ All training and evaluation runs tracked with **Weights & Biases**:
 
 ---
 
+## 📚 Custom Dataset Collection
+
+To build a high-quality **Russian–Turkmen parallel corpus**, we designed a semi-automated pipeline (see figure below):
+
+![Data Collection Workflow](DATA%20SCIENCE%20SEMINAR.png)
+
+**Steps:**
+1. **Data Sources**  
+   - Uzbek high-school e-library (Turkmen & Russian textbooks).  
+   - Turkmen news websites and books with multiple translations.  
+
+2. **Text Extraction & Preprocessing**  
+   - Scraped Russian and Turkmen text into a raw corpus.  
+
+3. **Embedding-based Alignment**  
+   - Generated sentence embeddings of sentences from raw corpus  
+   - Matched Russian–Turkmen pairs using **cosine similarity**.  
+
+4. **Human-in-the-Loop Annotation**  
+   - Candidate parallel sentences were reviewed in **Label Studio**.  
+   - Manual cleaning ensured higher alignment accuracy.  
+
+5. **Final Aligned Dataset**  
+   - Produced a curated dataset of **Turkmen–Russian parallel sentences** for training and evaluation.  
+---
+
+
 ## 🧠 Models Evaluated
 - **[LaBSE](https://arxiv.org/abs/2007.01852)** (Google Research)  
   Dual-encoder optimized for cross-lingual retrieval.  
